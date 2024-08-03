@@ -1,1 +1,1 @@
-same old
+Deletion exercise, preparation for training session
