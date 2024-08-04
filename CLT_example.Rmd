@@ -1,0 +1,38 @@
+---
+title: "CLT example"
+author: "OM"
+#date: "04/08/2024"
+output: html_document
+---
+  ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+set.seed(123)
+
+# Parameters
+lambda <- 1 # rate parameter for exponential distribution
+n_simulations <- 1000 # number of simulations
+sample_sizes <- c(5, 10, 30, 50, 100) # different sample sizes
+
+# Function to simulate sample means
+simulate_means <- function(sample_size, n_simulations, lambda) {
+  sample_means <- numeric(n_simulations)
+  for (i in 1:n_simulations) {
+    sample <- rexp(sample_size, rate = lambda)
+    sample_means[i] <- mean(sample)
+  }
+  return(sample_means)
+}
+
+# Simulate sample means for different sample sizes
+simulation_results <- lapply(sample_sizes, simulate_means, n_simulations = n_simulations, lambda = lambda)
+
+# Convert results to data frame for plotting
+simulation_df <- data.frame(
+  SampleMean = unlist(simulation_results),
+  SampleSize = factor(rep(sample_sizes, each = n_simulations))
+)
+
+To use this document, copy the code above into an `.Rmd` file, and then knit it in RStudio. This will generate an HTML document explaining the Central Limit Theorem with corresponding visualizations.
+
