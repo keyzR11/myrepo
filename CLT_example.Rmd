@@ -4,10 +4,10 @@ title: "CLT example"
 #date: "04/08/2024"
 output: html_document
 
-
 ---
+
 library(tidyverse)
-  ```{r setup, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -38,4 +38,4 @@ simulation_df <- data.frame(
 )
 
 To use this document, copy the code above into an `.Rmd` file, and then knit it in RStudio. This will generate an HTML document explaining the Central Limit Theorem with corresponding visualizations.
-
+```
