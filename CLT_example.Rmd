@@ -1,12 +1,15 @@
 ---
 title: "CLT example"
-author: "OM"
+#author: "OM"
 #date: "04/08/2024"
 output: html_document
+
+
 ---
+library(tidyverse)
   ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-
+```
 
 set.seed(123)
 
