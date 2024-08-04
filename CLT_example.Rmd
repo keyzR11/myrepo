@@ -1,9 +1,7 @@
 ---
-title: "Change of plans
-#author: "OM"
-#date: "04/08/2024"
+title: "Change of plans"
 output: github_document
- keep_md: true
+keep_md: true
 ---
 
 ```{r setup, include=FALSE}
